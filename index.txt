@@ -1,1 +1,1 @@
-head
+https://pythonworld.ru/gui/pyqt5-layout.html
