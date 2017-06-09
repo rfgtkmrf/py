@@ -27,7 +27,7 @@ class Example(QMainWindow):
         qbtn.setToolTip('А это выход!')
         qbtn.resize(qbtn.sizeHint())
         qbtn.move(150, 50)
-               
+              
         self.setGeometry(250, 200, 400, 300)
         self.setWindowTitle('Програмка же!')
         self.setWindowIcon(QIcon('player.png'))
@@ -44,9 +44,8 @@ class Example(QMainWindow):
         sender = self.sender()
         self.statusBar().showMessage(sender.text() + ' was pressed')
         
-        lbl1 = QLabel('Zetcode', self)
-        lbl1.move(15, 10)
-        self.show()
+        lbl1 = QLabel('Сообщение', self)
+        lbl1.move(15, 20)
         
 
 if __name__ == '__main__':
