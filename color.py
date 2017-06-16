@@ -8,12 +8,10 @@ class Example(QWidget):
 
     def __init__(self):
         super().__init__()
-
         self.initUI()
 
 
     def initUI(self):
-
         col = QColor(0, 0, 0)
 
         self.btn = QPushButton('Dialog', self)

@@ -15,11 +15,11 @@ class Example(QMainWindow):
 
         self.setToolTip('Тут <i><b>нет</b></i> кнопки.')
 
-        btn = QPushButton('Button', self)
-        btn.clicked.connect(self.buttonClicked)
-        btn.setToolTip('Да, вот она, <b>кнопочка</b> :-)')
-        btn.resize(btn.sizeHint())
-        btn.move(50, 50)
+        self.btn = QPushButton('Button', self)
+        self.btn.clicked.connect(self.buttonClicked)
+        self.btn.setToolTip('Да, вот она, <b>кнопочка</b> :-)')
+        self.btn.resize(self.btn.sizeHint())
+        self.btn.move(50, 50)
 
         qbtn = QPushButton('Quit', self)
         #qbtn.clicked.connect(QCoreApplication.instance().quit)
@@ -27,7 +27,10 @@ class Example(QMainWindow):
         qbtn.setToolTip('А это выход!')
         qbtn.resize(qbtn.sizeHint())
         qbtn.move(150, 50)
-              
+        
+        self.lbl1 = QLabel('Нажми же кнопочку!', self)
+        self.lbl1.move(40, 20)
+        
         self.setGeometry(250, 200, 400, 300)
         self.setWindowTitle('Програмка же!')
         self.setWindowIcon(QIcon('player.png'))
@@ -41,11 +44,12 @@ class Example(QMainWindow):
         self.move(qr.topLeft())
         
     def buttonClicked(self):
+        self.lbl2 = QLabel('Сообщение 2', self)
+        self.lbl2.move(15, 20)
+        
         sender = self.sender()
         self.statusBar().showMessage(sender.text() + ' was pressed')
-        
-        lbl1 = QLabel('Сообщение', self)
-        lbl1.move(15, 20)
+
         
 
 if __name__ == '__main__':
