@@ -44,7 +44,7 @@ class Example(QMainWindow):
         self.move(qr.topLeft())
         
     def buttonClicked(self):
-        self.lbl2 = QLabel('Сообщение 2', self)
+        lbl2 = self.QLabel('Сообщение 2', self)
         self.lbl2.move(15, 20)
         
         sender = self.sender()
